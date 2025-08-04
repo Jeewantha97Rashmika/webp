@@ -90,7 +90,7 @@
 
 .tab {
   padding: 15px;
-  font-size: 15px;
+  font-size: 12px;
   cursor: pointer;
   align-self: flex-end;
   text-align: center;
@@ -160,6 +160,23 @@
     gap: 10px;
     margin-block-start: 5px;
   }
+
+  .infoTabs {
+    flex-flow: row;
+    gap: 0;
+  }
+
+  .tabs {
+    flex: 1 1 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .tab {
+    flex: 1 1 auto;
+    min-inline-size: max-content;
+    white-space: nowrap;
+  }
 }
 
 @media only screen and (width <=400px) {
@@ -187,4 +204,5 @@
     text-align: center;
     gap: 10px;
   }
+
 }

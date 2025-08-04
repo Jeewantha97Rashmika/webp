@@ -126,9 +126,9 @@
           {{ $t("Playlists") }}
         </p>
       </router-link>
-      <SideNavMoreOptions />
+
       <router-link
-        class="navOption mobileShow"
+        class="navOption mobileHidden"
         role="button"
         to="/history"
         :title="historyTitle"
@@ -150,6 +150,7 @@
           {{ $t("History.History") }}
         </p>
       </router-link>
+      <SideNavMoreOptions />
       <hr>
       <router-link
         class="navOption mobileShow smallMobileOnlyHidden"

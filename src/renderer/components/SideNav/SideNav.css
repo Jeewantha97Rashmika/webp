@@ -234,15 +234,17 @@
   }
 
   .navLabel {
-    margin-inline-start: 0;
+    display: none;
+
+    /* margin-inline-start: 0;
     inline-size: 100%;
     text-align: center;
     inset-inline-start: 0;
-    font-size: 11px;
+    font-size: 11px; */
   }
 
   .moreOption {
-    display: block;
+    display: none;
   }
 
   .closed.hiddenLabels {
@@ -250,16 +252,14 @@
   }
 }
 
-@media only screen and (width <= 400px) {
-  /* Hide settings so that they appear in the more dropdown on smaller screens */
-  .smallMobileOnlyHidden {
-    display: none;
-  }
+/* Hide settings button completely */
+.smallMobileOnlyHidden {
+  display: none;
 }
 
-@media only screen and (width > 400px) {
+/* @media only screen and (width > 400px) {
   .smallMobileOnlyHidden {
     display: block;
   }
-}
+} */
 

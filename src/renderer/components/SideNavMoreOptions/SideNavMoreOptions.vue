@@ -15,13 +15,13 @@
         class="navIcon"
         :class="applyNavIconExpand"
       />
-      <p
+      <!-- <p
         v-if="!hideLabelsSideBar"
         id="moreNavLabel"
         class="navLabel"
       >
         {{ $t("More") }}
-      </p>
+      </p> -->
     </div>
     <div
       v-if="openMoreOptions"
@@ -111,6 +111,25 @@
         </p>
       </router-link>
       <router-link
+        class="navOption"
+        :title="$t('History.History')"
+        :aria-label="hideLabelsSideBar ? $t('History.History'): null"
+        to="/history"
+      >
+        <FontAwesomeIcon
+          :icon="['fas', 'history']"
+          class="navIcon"
+          :class="applyNavIconExpand"
+        />
+        <p
+          v-if="!hideLabelsSideBar"
+          id="historyNavLabel"
+          class="navLabel"
+        >
+          {{ $t("History.History") }}
+        </p>
+      </router-link>
+      <router-link
         class="navOption smallMobileOnlyShow"
         :title="$t('Settings.Settings')"
         :aria-label="hideLabelsSideBar ? $t('Settings.Settings') : null"
@@ -129,24 +148,6 @@
         </p>
       </router-link>
     </div>
-    <router-link
-      class="navOption mobileShow"
-      :title="$t('History.History')"
-      :aria-label="hideLabelsSideBar ? $t('History.History'): null"
-      to="/history"
-    >
-      <FontAwesomeIcon
-        :icon="['fas', 'history']"
-        class="navIcon"
-        :class="applyNavIconExpand"
-      />
-      <p
-        id="historyNavLabel"
-        class="navLabel"
-      >
-        {{ $t("History.History") }}
-      </p>
-    </router-link>
     <hr>
     <router-link
       class="navOption mobileShow"
